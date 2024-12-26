@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    
+    @font-face {
+        font-family: 'Beanco-Font';
+        src: url('/fonts/Beanco-Font.woff2') format('woff2');
+    }
+
+    @font-face {
+        font-family: 'EudoxusSans-Bold';
+        src: url('/fonts/EudoxusSans-Bold.woff2') format('woff2');
+    }
+
+    @font-face {
+        font-family: 'EudoxusSans-ExtraBold';
+        src: url('/fonts/Beanco-ExtraBold.woff2') format('woff2');
+    }
+
+    @font-face {
+        font-family: 'EudoxusSans-ExtraLight';
+        src: url('/fonts/EudoxusSans-ExtraLight.woff2') format('woff2');
+    }
+
+    @font-face {
+        font-family: 'EudoxusSans-Light';
+        src: url('/fonts/EudoxusSans-Light.woff2') format('woff2');
+    }
+
+    @font-face {
+        font-family: 'EudoxusSans-Medium';
+        src: url('/fonts/EudoxusSans-Medium.woff2') format('woff2');
+    }
+
+    @font-face {
+        font-family: 'EudoxusSans-Regular';
+        src: url('/fonts/EudoxusSans-Regular.woff2') format('woff2');
+    }
+}
+
+@layer utilities {
+    .nav-hover-btn {
+        @apply relative after:absolute after:-bottom-0.5 after:left-0 after:h-[1px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-neutral-800 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom-left hover:after:scale-x-100 dark:after:bg-white cursor-pointer;
+    }
+
+    /* #nav a {
+        @apply relative uppercase text-[12px]
+    }
+
+    .nav-line {
+        @apply absolute right-0 bottom-0 inline-block w-[100%] h-[1px] bg-white duration-1000 ease-[cubic-bezier(0.19, 1, 0.22, 1)]
+    }
+
+    .nav-line:hover {
+        @apply w-[0%]
+    } */
+}
