@@ -6,6 +6,7 @@ import Home from './Home.jsx';
 const Loading = () => {
 
     useEffect(() => {
+
         var tl = gsap.timeline();
 
         tl.fromTo("#parent #child span", {
@@ -38,13 +39,15 @@ const Loading = () => {
                 height: "100%",
                 duration: 1.6,
                 delay: -2.3,
-                ease: "expo.inOut"
+                ease: "expo.inOut",
             })
-    })
+
+
+    }, [])
 
 
     return (
-        <div id='main' className='relative w-full h-screen font-EudoxusSans-Medium overflow-y-scroll scrollbar scrollbar-track-[#252a31] scrollbar-thumb-[#F3EAC0]'>
+        <div id='main' className='fixed w-full h-screen font-EudoxusSans-Medium'>
 
             {/* Loader */}
             <div id='fs' className='fixed w-full h-screen bg-[#252a31] text-white'>
@@ -79,7 +82,7 @@ const Loading = () => {
             <div id='elem' className='w-full absolute bottom-0 h-[0px] bg-[#F3EAC0]'></div>
 
             {/* Home */}
-            <div id='slate' className='w-full absolute bottom-0 h-[0px] bg-[#102127]'>
+            <div id='slate'  className='w-full absolute bottom-0 h-[0px] bg-[#102127]'>
                 <Home />
             </div>
 
