@@ -115,7 +115,7 @@ const Projects = ({ targetRef }) => {
                     <div
                         className='cnt cnt3 flex w-[54%] h-[42vw] overflow-hidden rounded-[3vw] mt-[8vw] mx-[17.4vw] hover:cursor-pointer'
                     >
-                        <a href="https://google.com" target="_blank" rel="noopener noreferrer">
+                        <a href="https://smolsuryansh.vercel.app/" target="_blank" rel="noopener noreferrer">
                             <img
                                 data-color="ECD5BB"
                                 data-index="2"
