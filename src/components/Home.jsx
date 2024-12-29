@@ -82,29 +82,38 @@ const Home = () => {
     const targetRef = useRef(null);
 
     useEffect(() => {
+
         const scroll = new LocomotiveScroll({
-          el: scrollContainerRef.current,
-          smooth: true,
-          multiplier: 1,
-          lerp: 0.05
+            el: scrollContainerRef.current,
+            smooth: true,
+            smartphone: {
+                smooth: 1,
+                breakpoint: 768,
+            },
+            tablet: {
+                smooth: 1,
+                breakpoint: 1024
+            },
+            multiplier: 1,
+            lerp: 0.05
         });
-    
+
         const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                scroll.update();
-                console.log("updated")
-              }
-            });
-          },
-          {
-            threshold: 0.1,
-          }
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        scroll.update();
+                        console.log("updated")
+                    }
+                });
+            },
+            {
+                threshold: 0.1,
+            }
         );
-    
+
         if (targetRef.current) {
-          observer.observe(targetRef.current);
+            observer.observe(targetRef.current);
         }
 
         const handleScroll = (e) => {
@@ -119,21 +128,21 @@ const Home = () => {
                 });
             }
         };
-    
+
         const links = document.querySelectorAll('.nav-hover-btn');
         links.forEach((link) => {
             link.addEventListener('click', handleScroll);
         });
-    
+
         // Cleanup on unmount
         return () => {
             links.forEach((link) => {
                 link.removeEventListener('click', handleScroll);
             });
-          observer.disconnect();
-          scroll.destroy();
+            observer.disconnect();
+            scroll.destroy();
         };
-      }, []);
+    }, []);
 
 
 
