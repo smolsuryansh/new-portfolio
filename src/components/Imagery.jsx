@@ -20,7 +20,7 @@ const Imagery = () => {
     return (
         <div>
             <div id='imagery' className='flex items-center justify-between w-full px-[5vw] py-[6vw] mt-[18vw] bg-[#102127]'>
-                <div id='imgLeft' className='w-[95%] md:w-[30%] h-auto'>
+                <div id='imgLeft' className='w-[95%] md:w-[30%] h-auto z-10'>
                     <h1 className='text-white leading-none md:text-[2vw]'>
                         I AM SURYANSH DUBEY, <br />
                         A PASSIONATE <br />
