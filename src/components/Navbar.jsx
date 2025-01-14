@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { IoIosArrowDown } from 'react-icons/io';
 
 const Navbar = () => {
     const [dropdownOpen, setDropdownOpen] = useState(false);

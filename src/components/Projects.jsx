@@ -29,7 +29,7 @@ const Projects = ({ targetRef }) => {
 
                     if (screenWidth < 768) { 
                         cursorOffsetX = (dets.clientX - bounds.left) - 16; 
-                        cursorOffsetY = (dets.clientY - bounds.top) - 300;
+                        cursorOffsetY = (dets.clientY - bounds.top) - 600;
                     } else if (screenWidth >= 768 && screenWidth < 1200) { 
                         cursorOffsetX = (dets.clientX - bounds.left) - 24;
                         cursorOffsetY = (dets.clientY - bounds.top) - 450; 
@@ -81,7 +81,7 @@ const Projects = ({ targetRef }) => {
                 <div className='flex items-baseline justify-between'>
 
                     <div
-                        className='cnt cnt1 w-[55%] h-[47vw] overflow-hidden rounded-[3vw] hover:cursor-pointer'
+                        className='cnt cnt1 flex items-center w-[55%] h-[47vw] overflow-hidden rounded-[3vw] hover:cursor-pointer'
                     >
                         <a href="https://astro-sakura-website.vercel.app/" target="_blank" rel="noopener noreferrer">
                             <img
@@ -96,7 +96,7 @@ const Projects = ({ targetRef }) => {
                     </div>
 
                     <div
-                        className='cnt cnt2 w-[33%] h-[31vw] overflow-hidden rounded-[3vw] mr-[5vw] hover:cursor-pointer'
+                        className='cnt cnt2 flex items-center w-[33%] h-[31vw] overflow-hidden rounded-[3vw] mr-[5vw] hover:cursor-pointer'
                     >
                         <a href="https://github.com/smolsuryansh" target="_blank" rel="noopener noreferrer">
                             <img
@@ -122,7 +122,24 @@ const Projects = ({ targetRef }) => {
                                 data-scroll
                                 data-scroll-speed="-1.5"
                                 src="/imgs/portfolio.png"
-                                className='w-[105%] object-stretch'
+                                className='w-[105%] object-center object-stretch'
+                            />
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <div
+                        className='cnt cnt3 flex items-center w-[33%] h-[31vw] overflow-hidden rounded-[3vw] mt-[8vw] ml-[32vw] hover:cursor-pointer'
+                    >
+                        <a href="https://bundestats.vercel.app/" target="_blank" rel="noopener noreferrer">
+                            <img
+                                data-color="D85061"
+                                data-index="3"
+                                data-scroll
+                                data-scroll-speed="-1.5"
+                                src="/imgs/bundestats.jpg"
+                                className='w-[105%] object-center'
                             />
                         </a>
                     </div>
@@ -182,6 +199,23 @@ const Projects = ({ targetRef }) => {
                             <img src="/imgs/portfolio3.png" alt="" />
                             <img src="/imgs/portfolio4.png" alt="" />
                             <img src="/imgs/portfolio5.png" alt="" />
+                        </div>
+                    </div>
+
+                    <div>
+                        <div id='crow' className='flex items-center gap-[20px] w-full p-[0.7vw]'>
+                            <div id='c-circle' className='flex w-[2vw] h-[2vw] border-[2px] border-white rounded-[40%]'></div>
+                            <div id='c-capsule' className='py-[0.7vw] px-[3vw] rounded-[100px] bg-white font-EudoxusSans-Light'>
+                                Bundestats
+                            </div>
+                        </div>
+                        <h5 className='bg-[#F3EAC0] flex items-center justify-center rounded-[80px] mb-[0.7vw] px-[1vw]'>A website for Bundesliga fans to view statistics about the league</h5>
+                        <div id='elem' className='w-[26vw] relative'>
+                            <img src="/imgs/bundestats1.png" alt="" />
+                            <img src="/imgs/bundestats2.png" alt="" />
+                            <img src="/imgs/bundestats3.png" alt="" />
+                            <img src="/imgs/bundestats4.png" alt="" />
+                            <img src="/imgs/bundestats5.png" alt="" />
                         </div>
                     </div>
 
