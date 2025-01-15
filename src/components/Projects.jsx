@@ -29,7 +29,7 @@ const Projects = ({ targetRef }) => {
 
                     if (screenWidth < 768) { 
                         cursorOffsetX = (dets.clientX - bounds.left) - 16; 
-                        cursorOffsetY = (dets.clientY - bounds.top) - 600;
+                        cursorOffsetY = (dets.clientY - bounds.top) - 200;
                     } else if (screenWidth >= 768 && screenWidth < 1200) { 
                         cursorOffsetX = (dets.clientX - bounds.left) - 24;
                         cursorOffsetY = (dets.clientY - bounds.top) - 450; 
@@ -153,13 +153,13 @@ const Projects = ({ targetRef }) => {
 
                     <div>
                         <div id='crow' className='flex items-center gap-[20px] w-full p-[0.7vw]'>
-                            <div id='c-circle' className='w-[2vw] h-[2vw] border-[2px] border-white rounded-[40%]'></div>
+                            <div id='c-circle' className='sm:w-[2vw] w-[4vw] sm:h-[2vw] h-[4vw] border-[2px] border-white rounded-[40%]'></div>
                             <div id='c-capsule' className='py-[0.7vw] px-[2vw] rounded-[80px] bg-white font-EudoxusSans-Light'>
                                 SAKURA
                             </div>
                         </div>
-                        <h5 className='bg-[#F3EAC0] flex items-center justify-start rounded-[80px] mb-[0.7vw] px-[1vw]'>A fun project using gsap :D</h5>
-                        <div id='elem' className='w-[26vw] relative'>
+                        <h5 className='bg-[#F3EAC0] flex items-center justify-start rounded-[80px] mb-[0.7vw] px-[1vw]'>A fun project using gsap</h5>
+                        <div id='elem' className='sm:w-[26vw] w-[15rem] relative'>
                             <img src="/imgs/sakura1.png" alt="" />
                             <img src="/imgs/sakura2.png" alt="" />
                             <img src="/imgs/sakura3.png" alt="" />
@@ -170,13 +170,13 @@ const Projects = ({ targetRef }) => {
 
                     <div>
                         <div id='crow' className='flex items-center gap-[20px] w-full py-[0.7vw]'>
-                            <div id='c-circle' className='w-[2vw] h-[2vw] border-[2px] border-white rounded-[40%]'></div>
+                            <div id='c-circle' className='sm:w-[2vw] w-5 sm:h-[2vw] h-5 border-[2px] border-white rounded-[40%]'></div>
                             <div id='c-capsule' className='py-[0.7vw] px-[3vw] rounded-[100px] bg-white font-EudoxusSans-Light'>
                                 VISIT GITHUB
                             </div>
                         </div>
                         <h5 className='bg-[#F3EAC0] flex items-center justify-start rounded-[80px] mb-[0.7vw] px-[1vw]'>Visit more of my projects here</h5>
-                        <div id='elem' className='w-[26vw] relative'>
+                        <div id='elem' className='sm:w-[26vw] w-[15rem] relative'>
                             <img src="/imgs/github-pfp1.png" alt="" />
                             <img src="/imgs/github-pfp2.png" alt="" />
                             <img src="/imgs/github-pfp3.png" alt="" />
@@ -187,13 +187,13 @@ const Projects = ({ targetRef }) => {
 
                     <div>
                         <div id='crow' className='flex items-center gap-[20px] w-full p-[0.7vw]'>
-                            <div id='c-circle' className='flex w-[2vw] h-[2vw] border-[2px] border-white rounded-[40%]'></div>
+                            <div id='c-circle' className='flex sm:w-[2vw] w-[4vw] sm:h-[2vw] h-[4vw] border-[2px] border-white rounded-[40%]'></div>
                             <div id='c-capsule' className='py-[0.7vw] px-[3vw] rounded-[100px] bg-white font-EudoxusSans-Light'>
                                 PORTFOLIO
                             </div>
                         </div>
-                        <h5 className='bg-[#F3EAC0] flex items-center justify-center rounded-[80px] mb-[0.7vw] px-[1vw]'>The very own website you are looking at right now (Also I'm new to frontend)</h5>
-                        <div id='elem' className='w-[26vw] relative'>
+                        <h5 className='bg-[#F3EAC0] flex items-center justify-center rounded-[80px] mb-[0.7vw] px-[1vw]'>The very own website you are looking at right now</h5>
+                        <div id='elem' className='sm:w-[26vw] w-[15rem] relative'>
                             <img src="/imgs/portfolio1.png" alt="" />
                             <img src="/imgs/portfolio2.png" alt="" />
                             <img src="/imgs/portfolio3.png" alt="" />
@@ -204,13 +204,13 @@ const Projects = ({ targetRef }) => {
 
                     <div>
                         <div id='crow' className='flex items-center gap-[20px] w-full p-[0.7vw]'>
-                            <div id='c-circle' className='flex w-[2vw] h-[2vw] border-[2px] border-white rounded-[40%]'></div>
+                            <div id='c-circle' className='flex sm:w-[2vw] w-[4vw] sm:h-[2vw] h-[4vw] border-[2px] border-white rounded-[40%]'></div>
                             <div id='c-capsule' className='py-[0.7vw] px-[3vw] rounded-[100px] bg-white font-EudoxusSans-Light'>
                                 Bundestats
                             </div>
                         </div>
                         <h5 className='bg-[#F3EAC0] flex items-center justify-center rounded-[80px] mb-[0.7vw] px-[1vw]'>A website for Bundesliga fans to view statistics about the league</h5>
-                        <div id='elem' className='w-[26vw] relative'>
+                        <div id='elem' className='sm:w-[26vw] w-[15rem] relative'>
                             <img src="/imgs/bundestats1.png" alt="" />
                             <img src="/imgs/bundestats2.png" alt="" />
                             <img src="/imgs/bundestats3.png" alt="" />
