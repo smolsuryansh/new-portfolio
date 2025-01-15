@@ -33,7 +33,7 @@ const Imagery = () => {
                 </div>
 
                 <div id='imgRight' className='relative flex items-center justify-center w-95% md:w-[60%] h-auto md:pr-0 pr-[23vw]'>
-                    <div id='imgCntnr' className='absolute w-[30vw] h-[45vw] rounded-[1vw] translate-y-[-10%] translate-x-[-30%] rotate-[-7deg] bg-[#CB5A62] bg-[url(/imgs/astro-web.png)] bg-cover bg-center brightness-50 hover:brightness-100 transition-all duration-[2000ms] ease-[cubic-bezier(0.19,_1,_0.22,_1)]'></div>
+                    <div id='imgCntnr' className='absolute w-[30vw] h-[45vw] rounded-[1vw] translate-y-[-10%] translate-x-[-30%] rotate-[-7deg] bg-[#CB5A62] bg-[url(/imgs/bundestats.jpg)] bg-cover bg-center brightness-50 hover:brightness-100 transition-all duration-[2000ms] ease-[cubic-bezier(0.19,_1,_0.22,_1)]'></div>
 
                     <div id='imgCntnr' className='absolute w-[30vw] h-[45vw] rounded-[1vw] bg-slate-600 bg-[url(/imgs/astro-web2.png)] bg-cover bg-center brightness-50 hover:brightness-100 transition-all duration-[2000ms] ease-[cubic-bezier(0.19,_1,_0.22,_1)]'></div>
 
