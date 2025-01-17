@@ -54,7 +54,7 @@ const Projects = ({ targetRef }) => {
                         targetChild.style.opacity = 0; 
                     }
                     showingImg.style.filter = "grayscale(0)";
-                    document.querySelector("#work").style.backgroundColor = "#102127";
+                    document.querySelector("#work").style.backgroundColor = "#0d1a1f";
                 });
             });
         }

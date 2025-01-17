@@ -4,7 +4,7 @@ import { SiGmail } from 'react-icons/si'
 
 const Contact = () => {
     return (
-        <div id='contact' className='bg-[#E57F84] py-[6vw]'>
+        <div id='contact' className='bg-[#ed5757] py-[6vw]'>
             <div className='flex items-center justify-center'>
                 <h1 className='text-center font-EudoxusSans-Medium text-white text-[7vw] md:text-[5vw] leading-none'>
                     OH, SO <br />
@@ -15,7 +15,7 @@ const Contact = () => {
             </div>
 
             <div className='flex items-center justify-center pt-[7vw]'>
-                <a href='mailto:suryanshdubey2525@gmail.com' target='_blank' className='relative overflow-hidden text-white bg-[#E57F84] py-[2vw] px-[14vw] border-[0.1vw] border-white rounded-full transition-all ease-out duration-300 group hover:text-black'>
+                <a href='mailto:suryanshdubey2525@gmail.com' target='_blank' className='relative overflow-hidden text-white bg-[#ed5757] py-[2vw] px-[14vw] border-[0.1vw] border-white rounded-full transition-all ease-out duration-300 group hover:text-black'>
                     <span className="absolute inset-0 bg-white scale-x-0 origin-center transition-transform duration-300 ease-out rounded-[100px] group-hover:scale-x-100 group-hover:duration-300 group-hover:ease-out group-focus-within:scale-x-100"></span>
                     <span className="relative z-10 font-EudoxusSans-Bold md:text-[1.3vw]">Contact me</span>
                 </a>
