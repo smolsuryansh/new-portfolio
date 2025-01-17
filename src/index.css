@@ -2,6 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
+.default {
+    --background: 13, 26, 31;
+    --backgroundDiff: 37, 42, 49;
+    --fontMain: 255, 255, 255;
+    --fontSpecial: 243 234 192;
+    --contact: 237, 87, 87;
+    --contactHover: 66, 151, 160;
+    --fontHover: 200, 189, 137;
+}
+
+.light {
+    --background: 252, 250, 248;
+    --backgroundDiff: 209, 218, 216;
+    --fontMain: 40, 40, 40;
+    --fontSpecial: 33, 203, 138;
+    --contact: 139, 173, 158;
+    --contactHover: 33, 203, 138;
+    --fontHover: 48, 144, 108;
+}
+
+.dark {
+    --background: 0, 0, 0;
+    --backgroundDiff: 40, 40, 40;
+    --fontMain: 252, 252, 252;
+    --fontSpecial: 33, 203, 138;
+    --contact: 211, 142, 142;
+    --contactHover: 142, 158, 211;
+    --fontHover: 48, 144, 108;
+}
+
+.arch {
+    --background: 238, 235, 226;
+    --backgroundDiff: 211, 207, 193;
+    --fontMain: 8, 9, 9;
+    --fontSpecial: 153, 148, 127;
+    --contact: 211, 142, 142;
+    --contactHover: 142, 158, 211;
+    --fontHover: 111, 106, 84;
+}
+
+* {
+    @apply transition-colors duration-200
+}
+
 @layer base {
     
     @font-face {
@@ -42,7 +86,7 @@
 
 @layer utilities {
     .nav-hover-btn {
-        @apply relative after:absolute after:-bottom-0.5 after:left-0 after:h-[1px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-neutral-800 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom-left hover:after:scale-x-100 dark:after:bg-white cursor-pointer;
+        @apply relative after:absolute after:-bottom-0.5 after:left-0 after:h-[1px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-neutral-800 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom-left hover:after:scale-x-100 dark:after:bg-fontMain cursor-pointer;
     }
 
     .justify-baseline {

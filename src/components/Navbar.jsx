@@ -9,7 +9,7 @@ const Navbar = () => {
 
     return (
         <div>
-            <div id='nav' className='flex justify-between px-[5vw] py-0 items-center w-full h-[100px] uppercase md:text-[0.8vw] text-[2vw] text-white relative'>
+            <div id='nav' className='flex justify-between px-[5vw] py-0 items-center w-full h-[100px] uppercase md:text-[0.8vw] text-[2vw] text-fontMain relative'>
                 <a href="#home" className='nav-hover-btn'>Suryansh Dubey</a>
                 <a href="#work" className='nav-hover-btn opacity-0 md:opacity-100'>Projects</a>
                 
@@ -23,14 +23,14 @@ const Navbar = () => {
                     
                     
                     {dropdownOpen && (
-                        <div className='absolute top-[-1vw] left-[-1vw] w-[10vw] bg-[#252a31] px-[0.45vw] py-[0.4vw] rounded-2xl'>
+                        <div className='absolute top-[-1vw] left-[-1vw] w-[10vw] bg-backgroundDiff px-[0.45vw] py-[0.4vw] rounded-2xl'>
                             <hr className='mt-[2.5vw] pt-[0.7vw] opacity-[0.8]'/>
 
-                            <a href="https://www.linkedin.com/in/suryansh-dubey-271418285/" target='_blank' rel="noopener noreferrer" className='block mb-[0.7vw] py-[0.2vw] px-2 hover:bg-[#0d1a1f]'>LinkedIn</a>
+                            <a href="https://www.linkedin.com/in/suryansh-dubey-271418285/" target='_blank' rel="noopener noreferrer" className='block mb-[0.7vw] py-[0.2vw] px-2 hover:bg-background'>LinkedIn</a>
 
-                            <a href="https://github.com/smolsuryansh" target='_blank' rel="noopener noreferrer" className='block mb-[0.7vw] py-[0.2vw] px-2 hover:bg-[#0d1a1f]'>GitHub</a>
+                            <a href="https://github.com/smolsuryansh" target='_blank' rel="noopener noreferrer" className='block mb-[0.7vw] py-[0.2vw] px-2 hover:bg-background'>GitHub</a>
                             
-                            <a href="https://instagram.com/smolsuryansh252" target='_blank' rel="noopener noreferrer" className='block mb-[0.7vw] py-[0.2vw] px-2 hover:bg-[#0d1a1f]'>Instagram</a>
+                            <a href="https://instagram.com/smolsuryansh252" target='_blank' rel="noopener noreferrer" className='block mb-[0.7vw] py-[0.2vw] px-2 hover:bg-background'>Instagram</a>
                         </div>
                     )}
                 </div>

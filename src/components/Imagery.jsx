@@ -6,7 +6,7 @@ const HoverText = ({ text, containerClass }) => {
             {text.split('').map((char, index) => (
                 <span
                     key={index}
-                    className={`hover:text-white cursor-pointer ${containerClass}`}
+                    className={`hover:text-fontHover cursor-pointer ${containerClass}`}
                 >
                     {char}
                 </span>
@@ -19,12 +19,12 @@ const Imagery = () => {
 
     return (
         <div>
-            <div id='imagery' className='flex items-center justify-between w-full px-[5vw] py-[6vw] mt-[18vw] bg-[#0d1a1f]'>
+            <div id='imagery' className='flex items-center justify-between w-full px-[5vw] py-[6vw] mt-[18vw] bg-background'>
                 <div id='imgLeft' className='w-[95%] md:w-[30%] h-auto z-10'>
-                    <h1 className='text-white leading-none md:text-[2vw]'>
+                    <h1 className='text-fontMain leading-none md:text-[2vw]'>
                         I AM SURYANSH DUBEY, <br />
                         A PASSIONATE <br />
-                        <HoverText containerClass='font-Beanco-Font text-[5vw] align-middle leading-[0.5] text-[#F3EAC0] md:text-[3vw]'
+                        <HoverText containerClass='font-Beanco-Font text-[5vw] align-middle leading-[0.5] text-fontSpecial md:text-[3vw]'
                             text="Computer Science" /> <br />
                         STUDENT, CONSTANTLY <br />
                         LEARNING WHILE ENJOYING <br />
