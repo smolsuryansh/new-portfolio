@@ -8,7 +8,6 @@ function App() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   useEffect(() => {
-    // Apply the selected theme to the document body
     document.documentElement.className = theme;
   }, [theme]);
 
@@ -24,7 +23,7 @@ function App() {
         <div className="relative">
           {/* Dropdown Toggle */}
           <button
-            className="p-3 bg-background text-fontMain rounded-full shadow-md"
+            className="p-3 bg-background border-1 border border-fontSpecial text-fontMain rounded-full shadow-md"
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
           >
             Themes
