@@ -46,15 +46,6 @@
     @apply transition-colors duration-200
 }
 
- /* fix */
-html, body {
-    overscroll-behavior: none;
-}
-
-[data-scroll-container] {
-    overscroll-behavior: contain;
-}
-
 @layer base {
     
     @font-face {
