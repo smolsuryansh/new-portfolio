@@ -10,7 +10,6 @@ function App() {
   useEffect(() => {
 
     document.documentElement.className = theme;
-    
   }, [theme]);
 
   const handleThemeChange = (newTheme) => {
