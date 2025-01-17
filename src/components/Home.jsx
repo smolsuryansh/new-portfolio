@@ -148,7 +148,7 @@ const Home = () => {
 
     return (
 
-        <div id='home' ref={scrollContainerRef} className='w-full bg-[#102127]' data-scroll-container>
+        <div id='home' ref={scrollContainerRef} className='w-full bg-[#0d1a1f]' data-scroll-container>
 
             <Navbar />
 
@@ -190,13 +190,13 @@ const Home = () => {
 
             <TechStack />
 
-            <div className="bg-[#102127]">
+            <div className="bg-[#0d1a1f]">
                 <hr className="opacity-[0.6] w-[73vw] mx-auto border-t border-[#F3EAC0] " />
             </div>
 
             <Projects targetRef={targetRef} />
 
-            <div className="bg-[#102127]">
+            <div className="bg-[#0d1a1f]">
                 <hr className="opacity-[0.6] w-[73vw] mx-auto border-t border-[#F3EAC0] " />
             </div>
 

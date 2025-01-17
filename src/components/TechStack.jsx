@@ -3,7 +3,7 @@ import React from 'react'
 const TechStack = () => {
     return (
         <div>
-            <div className='bg-[#102127] w-full overflow-hidden px-[5vw] py-[6vw] pt-[18vw] text-white'>
+            <div className='bg-[#0d1a1f] w-full overflow-hidden px-[5vw] py-[6vw] pt-[18vw] text-white'>
                 <svg id='o-ui-arrow' width="64" height="64" viewBox='0 0 64 64' fill='none' xmlns='http://www.w3.org/2000/svg' className='stroke-white opacity-[0.6] sm:w-[64px] sm:h-[64px] w-[48px] h-[48px]'>
                     <path d='M3.10162 3.10156L62.9999 62.9999' strokeLinecap="round" strokeLinejoin='round'></path>
                     <path d='M63 1.00001L63 63L0.999989 63' strokeLinecap="round" strokeLinejoin='round'></path>

@@ -26,11 +26,11 @@ const Navbar = () => {
                         <div className='absolute top-[-1vw] left-[-1vw] w-[10vw] bg-[#252a31] px-[0.45vw] py-[0.4vw] rounded-2xl'>
                             <hr className='mt-[2.5vw] pt-[0.7vw] opacity-[0.8]'/>
 
-                            <a href="https://www.linkedin.com/in/suryansh-dubey-271418285/" target='_blank' rel="noopener noreferrer" className='block mb-[0.7vw] py-[0.2vw] px-2 hover:bg-[#102127]'>LinkedIn</a>
+                            <a href="https://www.linkedin.com/in/suryansh-dubey-271418285/" target='_blank' rel="noopener noreferrer" className='block mb-[0.7vw] py-[0.2vw] px-2 hover:bg-[#0d1a1f]'>LinkedIn</a>
 
-                            <a href="https://github.com/smolsuryansh" target='_blank' rel="noopener noreferrer" className='block mb-[0.7vw] py-[0.2vw] px-2 hover:bg-[#102127]'>GitHub</a>
+                            <a href="https://github.com/smolsuryansh" target='_blank' rel="noopener noreferrer" className='block mb-[0.7vw] py-[0.2vw] px-2 hover:bg-[#0d1a1f]'>GitHub</a>
                             
-                            <a href="https://instagram.com/smolsuryansh252" target='_blank' rel="noopener noreferrer" className='block mb-[0.7vw] py-[0.2vw] px-2 hover:bg-[#102127]'>Instagram</a>
+                            <a href="https://instagram.com/smolsuryansh252" target='_blank' rel="noopener noreferrer" className='block mb-[0.7vw] py-[0.2vw] px-2 hover:bg-[#0d1a1f]'>Instagram</a>
                         </div>
                     )}
                 </div>

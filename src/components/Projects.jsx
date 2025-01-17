@@ -65,7 +65,7 @@ const Projects = ({ targetRef }) => {
 
     return (
 
-        <div id='work' ref={targetRef} className='bg-[#102127] pt-[8vw] pb-[12vw]'>
+        <div id='work' ref={targetRef} className='bg-[#0d1a1f] pt-[8vw] pb-[12vw]'>
             <div id='workrow' className='flex items-center justify-between text-white px-[13vw] pr-[10vw]'>
                 <h1 className='text-[7vw]'>My Proje<span className='font-Beanco-Font text-[10vw] text-[#F3EAC0]'>c</span>ts</h1>
                 <div className='pr-[30vw] pt-[3vw]'>
@@ -113,7 +113,7 @@ const Projects = ({ targetRef }) => {
 
                 <div>
                     <div
-                        className='cnt cnt3 flex w-[54%] h-[42vw] overflow-hidden rounded-[3vw] mt-[8vw] mx-[17.4vw] hover:cursor-pointer'
+                        className='cnt cnt3 flex items-center w-[54%] h-[42vw] overflow-hidden rounded-[3vw] mt-[8vw] mx-[17.4vw] hover:cursor-pointer'
                     >
                         <a href="https://smolsuryansh.vercel.app/" target="_blank" rel="noopener noreferrer">
                             <img
@@ -122,7 +122,7 @@ const Projects = ({ targetRef }) => {
                                 data-scroll
                                 data-scroll-speed="-1.5"
                                 src="/imgs/portfolio.png"
-                                className='w-[105%] object-center object-stretch'
+                                className='w-[105%] object-cover'
                             />
                         </a>
                     </div>

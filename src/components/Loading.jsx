@@ -82,7 +82,7 @@ const Loading = () => {
             <div id='elem' className='w-full absolute bottom-0 h-[0px] bg-[#F3EAC0]'></div>
 
             {/* Home */}
-            <div id='slate'  className='w-full absolute bottom-0 h-[0px] bg-[#102127]'>
+            <div id='slate'  className='w-full absolute bottom-0 h-[0px] bg-[#0d1a1f]'>
                 <Home />
             </div>
 
