@@ -50,7 +50,7 @@ const Loading = () => {
         <div id='main' className='fixed w-full h-screen font-EudoxusSans-Medium'>
 
             {/* Loader */}
-            <div id='fs' className='fixed w-full h-screen bg-[#252a31] text-white'>
+            <div id='fs' className='fixed w-full h-screen bg-backgroundDiff text-fontMain'>
                 <div id='topheading' className='absolute top-[5%] left-[50%] translate-x-[-50%] translate-y-0 text-center'>
                     <h5 id='reveal'>
                         <ReusableSpan
@@ -67,7 +67,7 @@ const Loading = () => {
                     <ReusableSpan
                         title={
                             <>
-                                <span className='inline-block'>Greetings</span> <span className=' inline-block font-Beanco-Font text-[11vw] md:text-[4vw] text-[#F3EAC0] translate-y-[-1%]'> visitor, </span> <span className='inline-block'>I'm</span> <span className='inline-block'>a</span>
+                                <span className='inline-block'>Greetings</span> <span className=' inline-block font-Beanco-Font text-[11vw] md:text-[4vw] text-fontSpecial translate-y-[-1%]'> visitor, </span> <span className='inline-block'>I'm</span> <span className='inline-block'>a</span>
                             </>
                         }
                         parentId="parent"
@@ -79,10 +79,10 @@ const Loading = () => {
             </div>
 
             {/* Loader */}
-            <div id='elem' className='w-full absolute bottom-0 h-[0px] bg-[#F3EAC0]'></div>
+            <div id='elem' className='w-full absolute bottom-0 h-[0px] bg-fontSpecial'></div>
 
             {/* Home */}
-            <div id='slate'  className='w-full absolute bottom-0 h-[0px] bg-[#0d1a1f]'>
+            <div id='slate'  className='w-full absolute bottom-0 h-[0px] bg-background'>
                 <Home />
             </div>
 

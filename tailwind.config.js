@@ -15,6 +15,15 @@ export default {
         'EudoxusSans-Light': ['EudoxusSans-Light', 'sans-serif'],
         'EudoxusSans-Medium': ['EudoxusSans-Medium', 'sans-serif'],
         'EudoxusSans-Regular': ['EudoxusSans-Regular', 'sans-serif'],
+      }, 
+      colors: {
+        background: "rgba(var(--background))",
+        backgroundDiff: "rgba(var(--backgroundDiff))",
+        fontMain: "rgba(var(--fontMain))",
+        fontSpecial: "rgba(var(--fontSpecial))",
+        contact: "rgba(var(--contact))",
+        contactHover: "rgba(var(--contactHover))",
+        fontHover: "rgba(var(--fontHover))",
       }
     },
   },

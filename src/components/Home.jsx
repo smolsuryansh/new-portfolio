@@ -15,7 +15,7 @@ const HoverText = ({ text, containerClass }) => {
             {text.split('').map((char, index) => (
                 <span
                     key={index}
-                    className={`hover:text-white cursor-pointer ${containerClass}`}
+                    className={`hover:text-fontHover cursor-pointer ${containerClass}`}
                 >
                     {char}
                 </span>
@@ -148,11 +148,11 @@ const Home = () => {
 
     return (
 
-        <div id='home' ref={scrollContainerRef} className='w-full bg-[#0d1a1f]' data-scroll-container>
+        <div id='home' ref={scrollContainerRef} className='w-full bg-background' data-scroll-container>
 
             <Navbar />
 
-            <div id='row' className='flex md:flex-row flex-col justify-between w-[100%] mt-[5vw] px-[5vw] py-0 text-white overflow-hidden'>
+            <div id='row' className='flex md:flex-row flex-col justify-between w-[100%] mt-[5vw] px-[5vw] py-0 text-fontMain overflow-hidden'>
 
                 <h1 id='reveal1' className='text-[18vw] md:text-[12vw]'>Computer</h1>
 
@@ -166,8 +166,8 @@ const Home = () => {
 
             </div>
 
-            <div id='row' className='relative flex md:flex-row flex-col justify-between w-[100%] mt-[-5vw] px-[7vw] text-white overflow-hidden'>
-                <h1 id='animated-word' className='flex md:text-[14vw] text-[21vw] font-Beanco-Font pl-[38vw] md:pl-[8vw] mt-[-1vw] md:mt-[1vw] text-[#F3EAC0]'>
+            <div id='row' className='relative flex md:flex-row flex-col justify-between w-[100%] mt-[-5vw] px-[7vw] text-fontMain overflow-hidden'>
+                <h1 id='animated-word' className='flex md:text-[14vw] text-[21vw] font-Beanco-Font pl-[38vw] md:pl-[8vw] mt-[-1vw] md:mt-[1vw] text-fontSpecial'>
 
                     <HoverText text="Science" />
 
@@ -177,7 +177,7 @@ const Home = () => {
 
             </div>
 
-            <div className='relative w-full overflow-hidden px-[7vw] py-0 text-white'>
+            <div className='relative w-full overflow-hidden px-[7vw] py-0 text-fontMain'>
                 <div id='text' className='flex justify-between'>
                     <h5 id='reveal2' className='opacity-[0.6] mt-[14vw] text-[12px] md:hidden'>MY NAME IS <br /> SURYANSH DUBEY</h5>
 
@@ -190,14 +190,14 @@ const Home = () => {
 
             <TechStack />
 
-            <div className="bg-[#0d1a1f]">
-                <hr className="opacity-[0.6] w-[73vw] mx-auto border-t border-[#F3EAC0] " />
+            <div className="bg-background">
+                <hr className="opacity-[0.6] w-[73vw] mx-auto border-t border-fontSpecial " />
             </div>
 
             <Projects targetRef={targetRef} />
 
-            <div className="bg-[#0d1a1f]">
-                <hr className="opacity-[0.6] w-[73vw] mx-auto border-t border-[#F3EAC0] " />
+            <div className="bg-background">
+                <hr className="opacity-[0.6] w-[73vw] mx-auto border-t border-fontSpecial " />
             </div>
 
             <Contact />
