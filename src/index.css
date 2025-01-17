@@ -27,8 +27,8 @@
     --backgroundDiff: 40, 40, 40;
     --fontMain: 252, 252, 252;
     --fontSpecial: 33, 203, 138;
-    --contact: 211, 142, 142;
-    --contactHover: 142, 158, 211;
+    --contact: 139, 173, 158;
+    --contactHover: 33, 203, 138;
     --fontHover: 48, 144, 108;
 }
 
@@ -37,7 +37,7 @@
     --backgroundDiff: 211, 207, 193;
     --fontMain: 8, 9, 9;
     --fontSpecial: 153, 148, 127;
-    --contact: 211, 142, 142;
+    --contact: 200, 126, 116;
     --contactHover: 142, 158, 211;
     --fontHover: 111, 106, 84;
 }

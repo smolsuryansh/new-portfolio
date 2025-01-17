@@ -8,7 +8,9 @@ function App() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   useEffect(() => {
+
     document.documentElement.className = theme;
+    
   }, [theme]);
 
   const handleThemeChange = (newTheme) => {
@@ -21,7 +23,7 @@ function App() {
     <>
       <div className="fixed bottom-4 right-4 z-50">
         <div className="relative">
-          {/* Dropdown Toggle */}
+          {/* dropup? toggle */}
           <button
             className="p-3 bg-background border-1 border border-fontSpecial text-fontMain rounded-full shadow-md"
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
@@ -29,7 +31,7 @@ function App() {
             Themes
           </button>
 
-          {/* Dropdown Menu */}
+          {/* dropup? menu */}
           {isDropdownOpen && (
             <ul className="absolute bottom-full right-0 mb-2 bg-backgroundDiff text-fontMain shadow-md rounded-md overflow-hidden">
               <li>

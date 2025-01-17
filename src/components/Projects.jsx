@@ -95,7 +95,7 @@ const Projects = ({ targetRef }) => {
                                 data-scroll
                                 data-scroll-speed="-1.5"
                                 src="/imgs/astro-web4.png"
-                                className='w-[105%]'
+                                className='w-[105%] rounded-[3vw]'
                             />
                         </a>
                     </div>
@@ -110,7 +110,7 @@ const Projects = ({ targetRef }) => {
                                 data-scroll
                                 data-scroll-speed="-1.5"
                                 src="/imgs/github1.png"
-                                className='w-[105%]'
+                                className='w-[105%] rounded-[3vw]'
                             />
                         </a>
                     </div>
@@ -127,7 +127,7 @@ const Projects = ({ targetRef }) => {
                                 data-scroll
                                 data-scroll-speed="-1.5"
                                 src="/imgs/portfolio.png"
-                                className='w-[105%] object-cover'
+                                className='w-[105%] rounded-[3vw] object-cover'
                             />
                         </a>
                     </div>
@@ -144,7 +144,7 @@ const Projects = ({ targetRef }) => {
                                 data-scroll
                                 data-scroll-speed="-1.5"
                                 src="/imgs/bundestats.jpg"
-                                className='w-[105%] object-center'
+                                className='w-[105%] rounded-[3vw] object-center'
                             />
                         </a>
                     </div>
