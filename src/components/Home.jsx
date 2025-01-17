@@ -82,144 +82,67 @@ const Home = () => {
     const scrollContainerRef = useRef(null);
     const targetRef = useRef(null);
 
-    // useEffect(() => {
-
-    //     const scroll = new LocomotiveScroll({
-    //         el: scrollContainerRef.current,
-    //         smooth: true,
-    //         smartphone: {
-    //             smooth: true,
-    //             breakpoint: 768,
-    //         },
-    //         tablet: {
-    //             smooth: true,
-    //             breakpoint: 1024,
-    //         },
-    //         multiplier: 1,
-    //         lerp: 0.05
-    //     });
-
-    //     const observer = new IntersectionObserver(
-    //         (entries) => {
-    //             entries.forEach((entry) => {
-    //                 if (entry.isIntersecting) {
-    //                     scroll.update();
-    //                     console.log("updated")
-    //                 }
-    //             });
-    //         },
-    //         {
-    //             threshold: 0.1,
-    //         }
-    //     );
-
-    //     if (targetRef.current) {
-    //         observer.observe(targetRef.current);
-    //     }
-
-    //     const handleScroll = (e) => {
-    //         e.preventDefault();
-    //         const target = e.target.getAttribute('href');
-    //         const element = document.querySelector(target);
-    //         if (element) {
-    //             scroll.scrollTo(element, {
-    //                 offset: 0,
-    //                 duration: 1000,
-    //                 easing: [0.25, 0.0, 0.35, 1.0]
-    //             });
-    //         }
-    //     };
-
-    //     const links = document.querySelectorAll('.nav-hover-btn');
-    //     links.forEach((link) => {
-    //         link.addEventListener('click', handleScroll);
-    //     });
-
-    //     return () => {
-    //         links.forEach((link) => {
-    //             link.removeEventListener('click', handleScroll);
-    //         });
-    //         observer.disconnect();
-    //         scroll.destroy();
-    //     };
-    // }, []);
-
-    // scroll fix????????
     useEffect(() => {
-        let scroll;
 
-        // Function to initialize Locomotive Scroll
-        const initializeScroll = () => {
-            if (window.innerWidth >= 768) { // Disable for devices with width < 768px
-                scroll = new LocomotiveScroll({
-                    el: scrollContainerRef.current,
-                    smooth: true,
-                    smartphone: {
-                        smooth: false, // Disable smooth scrolling for mobile
-                        breakpoint: 768,
-                    },
-                    tablet: {
-                        smooth: true,
-                        breakpoint: 1024,
-                    },
-                    multiplier: 1,
-                    lerp: 0.05,
+        const scroll = new LocomotiveScroll({
+            el: scrollContainerRef.current,
+            smooth: true,
+            smartphone: {
+                smooth: true,
+                multiplier: 0.1,
+                breakpoint: 768,
+            },
+            tablet: {
+                smooth: true,
+                multiplier: 0.1,
+                breakpoint: 1024,
+            },
+            multiplier: 1,
+            lerp: 0.05
+        });
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        scroll.update();
+                        console.log("updated")
+                    }
                 });
-
-                // Intersection Observer to trigger scroll updates
-                const observer = new IntersectionObserver(
-                    (entries) => {
-                        entries.forEach((entry) => {
-                            if (entry.isIntersecting) {
-                                scroll.update();
-                                console.log("updated");
-                            }
-                        });
-                    },
-                    { threshold: 0.1 }
-                );
-
-                if (targetRef.current) {
-                    observer.observe(targetRef.current);
-                }
-
-                // Cleanup observer on unmount
-                return () => {
-                    observer.disconnect();
-                };
+            },
+            {
+                threshold: 0.1,
             }
-        };
+        );
 
-        // Call the initialize function
-        initializeScroll();
+        if (targetRef.current) {
+            observer.observe(targetRef.current);
+        }
 
-        // Handle smooth scrolling on link clicks
         const handleScroll = (e) => {
             e.preventDefault();
-            const target = e.target.getAttribute("href");
+            const target = e.target.getAttribute('href');
             const element = document.querySelector(target);
-            if (element && scroll) {
+            if (element) {
                 scroll.scrollTo(element, {
                     offset: 0,
                     duration: 1000,
-                    easing: [0.25, 0.0, 0.35, 1.0],
+                    easing: [0.25, 0.0, 0.35, 1.0]
                 });
             }
         };
 
-        const links = document.querySelectorAll(".nav-hover-btn");
+        const links = document.querySelectorAll('.nav-hover-btn');
         links.forEach((link) => {
-            link.addEventListener("click", handleScroll);
+            link.addEventListener('click', handleScroll);
         });
 
-        // Cleanup on unmount
         return () => {
             links.forEach((link) => {
-                link.removeEventListener("click", handleScroll);
+                link.removeEventListener('click', handleScroll);
             });
-            if (scroll) {
-                scroll.destroy();
-            }
+            observer.disconnect();
+            scroll.destroy();
         };
     }, []);
 
