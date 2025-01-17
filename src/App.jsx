@@ -35,7 +35,7 @@ function App() {
             <ul className="absolute bottom-full right-0 mb-2 bg-backgroundDiff text-fontMain shadow-md rounded-md overflow-hidden">
               <li>
                 <button
-                  className={`w-full px-4 py-2 text-left hover:bg-fontSpecial hover:text-fontMain`}
+                  className='w-full px-4 py-2 text-left hover:bg-fontSpecial hover:text-fontMain'
                   onClick={() => {
                     handleThemeChange("arch");
                     setIsDropdownOpen(false);
@@ -46,7 +46,7 @@ function App() {
               </li>
               <li>
                 <button
-                  className={`w-full px-4 py-2 text-left hover:bg-fontSpecial hover:text-fontMain`}
+                  className='w-full px-4 py-2 text-left hover:bg-fontSpecial hover:text-fontMain'
                   onClick={() => {
                     handleThemeChange("dark");
                     setIsDropdownOpen(false);
@@ -57,7 +57,7 @@ function App() {
               </li>
               <li>
                 <button
-                  className={`w-full px-4 py-2 text-left hover:bg-fontSpecial hover:text-fontMain`}
+                  className='w-full px-4 py-2 text-left hover:bg-fontSpecial hover:text-fontMain'
                   onClick={() => {
                     handleThemeChange("light");
                     setIsDropdownOpen(false);
@@ -68,7 +68,7 @@ function App() {
               </li>
               <li>
                 <button
-                  className={`w-full px-4 py-2 text-left hover:bg-fontSpecial hover:text-fontMain`}
+                  className='w-full px-4 py-2 text-left hover:bg-fontSpecial hover:text-fontMain'
                   onClick={() => {
                     handleThemeChange("default");
                     setIsDropdownOpen(false);

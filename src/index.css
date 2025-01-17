@@ -46,6 +46,15 @@
     @apply transition-colors duration-200
 }
 
+ /* fix */
+html, body {
+    overscroll-behavior: none;
+}
+
+[data-scroll-container] {
+    overscroll-behavior: contain;
+}
+
 @layer base {
     
     @font-face {
@@ -60,7 +69,7 @@
 
     @font-face {
         font-family: 'EudoxusSans-ExtraBold';
-        src: url('/fonts/Beanco-ExtraBold.woff2') format('woff2');
+        src: url('/fonts/EudoxusSans-ExtraBold.woff2') format('woff2');
     }
 
     @font-face {

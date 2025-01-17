@@ -8,6 +8,7 @@ import Projects from './Projects';
 
 import LocomotiveScroll from 'locomotive-scroll';
 import Contact from './Contact';
+import { FaSmileWink } from 'react-icons/fa';
 
 const HoverText = ({ text, containerClass }) => {
     return (
@@ -87,16 +88,33 @@ const Home = () => {
             el: scrollContainerRef.current,
             smooth: true,
             smartphone: {
-                smooth: 1,
+                smooth: true,
                 breakpoint: 768,
             },
             tablet: {
-                smooth: 1,
-                breakpoint: 1024
+                smooth: true,
+                breakpoint: 1024,
             },
             multiplier: 1,
             lerp: 0.05
         });
+
+        // fix
+        let isAtTop = true;
+
+        scroll.on("scroll", (obj) => {
+            isAtTop = obj.scroll.y === 0;
+        });
+
+        const handleTouchStart = (e) => {
+            if (!isAtTop) {
+                e.preventDefault();
+            }
+        };
+
+        window.addEventListener("touchstart", handleTouchStart, { passive: false});
+
+        // fix till here
 
         const observer = new IntersectionObserver(
             (entries) => {
@@ -134,13 +152,13 @@ const Home = () => {
             link.addEventListener('click', handleScroll);
         });
 
-        // Cleanup on unmount
         return () => {
             links.forEach((link) => {
                 link.removeEventListener('click', handleScroll);
             });
             observer.disconnect();
             scroll.destroy();
+            window.removeEventListener("touchstart", handleTouchStart); // fix
         };
     }, []);
 
