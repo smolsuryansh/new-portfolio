@@ -47,7 +47,7 @@
 }
 
 @layer base {
-    
+
     @font-face {
         font-family: 'Beanco-Font';
         src: url('/fonts/Beanco-Font.woff2') format('woff2');
