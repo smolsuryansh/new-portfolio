@@ -3,70 +3,128 @@ import '../index.css'
 
 const Projects = ({ targetRef }) => {
 
+    // useEffect(() => {
+    //     function cardShow() {
+    //         document.querySelectorAll(".cnt").forEach(function (cnt) {
+    //             let showingImg;
+    //             let targetChild;
+    //             let cursor = document.querySelector("#cursor");
+    //             let bounds = document.querySelector("#work").getBoundingClientRect();;
+    
+    //             const moveCursor = (dets) => {
+    //                 showingImg = dets.target;
+    //                 const index = dets.target.dataset.index;
+    //                 targetChild = cursor.children[index];
+    //                 bounds = document.querySelector("#work").getBoundingClientRect(); // Recalculate bounds for each mousemove
+
+    
+    //                 // HOW DO I EVEN FIX THIS?????
+    //                 const screenWidth = window.innerWidth;
+    
+    //                 let cursorOffsetX = (dets.clientX - bounds.left) - 32;
+    //                 let cursorOffsetY = (dets.clientY - bounds.top) - 625;
+
+    //                 console.log(cursorOffsetY)
+    
+
+    //                 if (screenWidth < 768) { 
+    //                     cursorOffsetX = (dets.clientX - bounds.left) - 16; 
+    //                     cursorOffsetY = (dets.clientY - bounds.top) - 200;
+    //                 } else if (screenWidth >= 768 && screenWidth < 1200) { 
+    //                     cursorOffsetX = (dets.clientX - bounds.left) - 24;
+    //                     cursorOffsetY = (dets.clientY - bounds.top) - 450; 
+    //                 }
+
+    //                 // const newBgClass = `bg-[${dets.target.dataset.color}]`;
+
+    //                 if (targetChild) {
+    //                     targetChild.style.opacity = 1;
+    //                     targetChild.style.transform = `translate(${cursorOffsetX}px, ${cursorOffsetY}px)`;
+    //                     showingImg.style.filter = "grayscale(1)";
+    //                 }
+    
+    //                 document.querySelector("#work").style.backgroundColor = "#" + dets.target.dataset.color;
+    //                 // document.querySelector("#work").classList.add(`bg-[#${dets.target.dataset.color}]`);
+    //             };
+    
+    //             const throttledMoveCursor = (e) => {
+    //                 requestAnimationFrame(() => moveCursor(e));
+    //             };
+    
+    //             cnt.addEventListener("mousemove", throttledMoveCursor);
+    //             cnt.addEventListener("mouseleave", function () {
+    //                 if (targetChild) {
+    //                     targetChild.style.opacity = 0; 
+    //                 }
+    //                 showingImg.style.filter = "grayscale(0)";
+    //                 document.querySelector("#work").style.background = "";
+    //                 // document.querySelector("#work").className = "bg-background";
+    //                 // document.querySelector("#work").classList.remove(`bg-[#${dets.target.dataset.color}]`);
+    //             });
+    //         });
+    //     }
+    
+    //     cardShow();
+    // }, []);
+
     useEffect(() => {
         function cardShow() {
             document.querySelectorAll(".cnt").forEach(function (cnt) {
                 let showingImg;
                 let targetChild;
                 let cursor = document.querySelector("#cursor");
-                let bounds = document.querySelector("#work").getBoundingClientRect();;
-    
+                let bounds = document.querySelector("#work").getBoundingClientRect();
+
                 const moveCursor = (dets) => {
                     showingImg = dets.target;
                     const index = dets.target.dataset.index;
                     targetChild = cursor.children[index];
-                    bounds = document.querySelector("#work").getBoundingClientRect(); // Recalculate bounds for each mousemove
 
-    
-                    // HOW DO I EVEN FIX THIS?????
+                    // Get bounds of the images container (where cursor is positioned)
+                    const imagesBounds = document.querySelector("#images").getBoundingClientRect();
+
+                    // Calculate position relative to the images container (cursor's parent)
+                    let cursorOffsetX = (dets.clientX - imagesBounds.left) - 35; // Adjust for cursor size
+                    let cursorOffsetY = (dets.clientY - imagesBounds.top) - 35;  // Adjust for cursor size
+
+                    // Responsive adjustments - keep these minimal
                     const screenWidth = window.innerWidth;
-    
-                    let cursorOffsetX = (dets.clientX - bounds.left) - 32;
-                    let cursorOffsetY = (dets.clientY - bounds.top) - 625;
-
-                    console.log(cursorOffsetY)
-    
-
-                    if (screenWidth < 768) { 
-                        cursorOffsetX = (dets.clientX - bounds.left) - 16; 
-                        cursorOffsetY = (dets.clientY - bounds.top) - 200;
-                    } else if (screenWidth >= 768 && screenWidth < 1200) { 
-                        cursorOffsetX = (dets.clientX - bounds.left) - 24;
-                        cursorOffsetY = (dets.clientY - bounds.top) - 450; 
+                    if (screenWidth < 768) {
+                        cursorOffsetX -= 5;
+                        cursorOffsetY -= 5;
+                    } else if (screenWidth >= 768 && screenWidth < 1200) {
+                        cursorOffsetX -= 1;
+                        cursorOffsetY -= 1;
                     }
-
-                    // const newBgClass = `bg-[${dets.target.dataset.color}]`;
 
                     if (targetChild) {
                         targetChild.style.opacity = 1;
                         targetChild.style.transform = `translate(${cursorOffsetX}px, ${cursorOffsetY}px)`;
                         showingImg.style.filter = "grayscale(1)";
                     }
-    
+
                     document.querySelector("#work").style.backgroundColor = "#" + dets.target.dataset.color;
-                    // document.querySelector("#work").classList.add(`bg-[#${dets.target.dataset.color}]`);
                 };
-    
+
                 const throttledMoveCursor = (e) => {
                     requestAnimationFrame(() => moveCursor(e));
                 };
-    
+
                 cnt.addEventListener("mousemove", throttledMoveCursor);
                 cnt.addEventListener("mouseleave", function () {
                     if (targetChild) {
-                        targetChild.style.opacity = 0; 
+                        targetChild.style.opacity = 0;
                     }
-                    showingImg.style.filter = "grayscale(0)";
+                    if (showingImg) {
+                        showingImg.style.filter = "grayscale(0)";
+                    }
                     document.querySelector("#work").style.background = "";
-                    // document.querySelector("#work").className = "bg-background";
-                    // document.querySelector("#work").classList.remove(`bg-[#${dets.target.dataset.color}]`);
                 });
             });
         }
-    
+
         cardShow();
     }, []);
-
 
     return (
 
