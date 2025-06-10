@@ -6,6 +6,38 @@ function App() {
 
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "default");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [fontsLoaded, setFontsLoaded] = useState(false);
+
+  // Preload fonts
+  useEffect(() => {
+    const loadFonts = async () => {
+      try {
+        // Preload your WOFF2 fonts
+        const fontPromises = [
+          new FontFace('Beanco-Font', 'url(/fonts/beanco.woff2)').load(),
+          new FontFace('EudoxusSans-Medium', 'url(/fonts/eudoxus-medium.woff2)').load(),
+          new FontFace('EudoxusSans-Regular', 'url(/fonts/eudoxus-regular.woff2)').load(),
+          // Add more fonts as needed
+        ];
+
+        const loadedFonts = await Promise.all(fontPromises);
+
+        // Add fonts to document
+        loadedFonts.forEach(font => {
+          document.fonts.add(font);
+        });
+
+        setFontsLoaded(true);
+      } catch (error) {
+        console.warn('Some fonts failed to load:', error);
+        // Set fontsLoaded to true anyway to prevent infinite loading
+        setFontsLoaded(true);
+      }
+    };
+
+    loadFonts();
+  }, []);
+
 
   useEffect(() => {
 
@@ -17,6 +49,14 @@ function App() {
     localStorage.setItem("theme", newTheme);
   };
 
+  // Don't render anything until fonts are loaded
+  if (!fontsLoaded) {
+    return (
+      <div className="fixed inset-0 bg-backgroundDiff flex items-center justify-center">
+        <div className="text-fontMain">Loading...</div>
+      </div>
+    );
+  }
 
   return (
     <>
